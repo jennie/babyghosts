@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .splash-container {
@@ -8,7 +9,9 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f7f7f7;
+  background: linear-gradient(-45deg, #ff99cc, #ffcc99, #99ccff, #cc99ff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
 }
 
 .splash-text {
@@ -16,4 +19,16 @@ body {
   font-size: 48px;
   font-weight: bold;
   color: #333333;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
